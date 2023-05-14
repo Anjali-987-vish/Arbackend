@@ -7,11 +7,11 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+import cors from "cors";
 // const  __dirname = path.resolve(dirname);
 // require('dotenv').config({path:"./config/.env"})
 dotenv.config({path:"./config/.env"});
-
+app.use(cors())
 connectDatabase();
 
 
